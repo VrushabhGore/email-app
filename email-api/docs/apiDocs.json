@@ -1,0 +1,12 @@
+{
+  "/":"api docs",
+  "/signup":"signup",
+  "/signin":"signin",
+  "/signout":"Sign Out",
+  "/users":"get All Users",
+  "/users/:userId":"get/Update/Delete User",
+  "/mails":"get all mails",
+  "/mail/new/:userId":"Create New mail",
+  "/mail/by/:userId":"get mail by User",
+  "/mail/:mailId":"Update/Delete Mail"
+  }

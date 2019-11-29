@@ -1,0 +1,23 @@
+version: "3"
+services:
+  nginx:
+    restart: always
+    build: 
+      dockerfile: DockerFile.dev
+      context: ./nginx
+    ports:
+      - '3055:80'
+  api:
+    build:
+      dockerfile: DockerFile.dev
+      context: ./email-api
+    volumes:
+      - /app/node_modules
+      - ./email-api:/app
+  frontend:
+    build:
+      dockerfile: DockerFile.dev
+      context: ./email-frontend
+    volumes:
+      - /app/node_modules
+      - ./email-frontend:/app
