@@ -1,10 +1,9 @@
 sudo: required
+language: node_js
 services:
   - docker
 before_install:
   - docker build -t vrushabhgore/react -f ./email-frontend/DockerFile.dev ./email-frontend
-
-
 after_success:
   - docker build -t vrushabhgore/email-frontend ./email-frontend
   - docker build -t vrushabhgore/email-api ./email-api
