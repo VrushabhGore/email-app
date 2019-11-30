@@ -5,12 +5,14 @@
             "name": "email-frontend",
             "image": "vrushabhgore/email-frontend",
             "hostname": "frontend",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },{
             "name": "email-api",
             "image": "vrushabhgore/email-api",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },{
             "name": "nginx",
             "image": "vrushabhgore/nginx",
@@ -22,7 +24,8 @@
                     "containerPort":80
                 }
             ],
-            "links":["email-frontend","email-api"]
+            "links":["email-frontend","email-api"],
+            "memory": 128
         }
     ]
 }
