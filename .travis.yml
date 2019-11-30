@@ -4,8 +4,6 @@ services:
 before_install:
   - docker build -t vrushabhgore/react -f ./email-frontend/DockerFile.dev ./email-frontend
 
-script:
-  - docker run -e CI=true vrushabhgore/react npm test
 
 after_success:
   - docker build -t vrushabhgore/email-frontend ./email-frontend
